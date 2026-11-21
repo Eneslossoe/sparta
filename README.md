@@ -9,7 +9,8 @@ ve açık kaynak Türkçe TTS ses modeli).
 
 | Dosya | Açıklama |
 |---|---|
-| `300_Spartalidan_Biri_Olsaydin.mp4` | 1920×1080, 30 fps, ~8:51, altyazılar videoya gömülü |
+| `300_Spartalidan_Biri_Olsaydin_github.mp4` | 1920×1080, 30 fps, 8:51, altyazılar gömülü (80 MB, depoya sığacak şekilde sıkıştırılmış) |
+| `300_Spartalidan_Biri_Olsaydin.mp4` | Aynı videonun yüksek kaliteli hali (178 MB, `build.py` ile üretilir; GitHub limiti nedeniyle depoda yok) |
 | `300_Spartalidan_Biri_Olsaydin.srt` | Ayrı altyazı dosyası (YouTube'a ayrıca yüklenebilir) |
 | `thumbnail.jpg` / `thumbnail.png` | 1280×720 kapak görseli |
 
@@ -47,6 +48,15 @@ Gerekenler: Python 3.10+, ffmpeg (libx264, rubberband), Cairo. Türkçe ses mode
 (`tr_TR-dfki-medium`, Piper) ilk çalıştırmada Hugging Face'ten indirilir. Fontlar `assets/fonts/`
 içindedir (Cinzel, Baloo 2, Nunito — SIL Open Font License); sistemde kurulu olmalıdır
 (`~/.local/share/fonts` + `fc-cache`).
+
+## Lisans notu (önemli)
+
+Seslendirmede kullanılan Piper modeli `tr_TR-dfki-medium`, **CC BY-NC-SA 4.0 (ticari olmayan)**
+lisanslı DFKI veri setiyle eğitilmiştir. Kanal para kazanıyorsa (reklam geliri vb.) bu sesi
+kullanmak lisansa aykırı olabilir. Çözüm: `src/tts.py` içindeki `synth_line` fonksiyonunu ticari
+kullanıma izin veren bir TTS'e (ör. ücretli bir ElevenLabs planı) ya da kendi kaydınıza
+bağlamak — zaman çizelgesi, altyazı, müzik ve animasyon yeni seslerin sürelerine otomatik uyar.
+Fontlar SIL OFL lisanslıdır (`assets/fonts/OFL-*.txt`), müzik ve efektler bu kodla üretilmiştir.
 
 ## Yapı
 
