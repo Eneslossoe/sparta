@@ -49,6 +49,7 @@ class Scene:
 # Speaker -> display name for name tags / subtitles colour
 SPEAKERS = {
     "N":   ("Anlatıcı", None),
+    "NR":  ("Anlatıcı", None),
     "LEO": ("Kral Leonidas", "#ffd166"),
     "XER": ("Kral Kserkses", "#d9a8ff"),
     "DIE": ("Dienekes", "#ffb38a"),

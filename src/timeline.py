@@ -87,10 +87,11 @@ def _chunks(text, maxlen=44):
     return cues
 
 
-def build():
+def build(scene_defs=None, chunker=None):
     t = 0.0
     scenes, cues = [], []
-    for sc in SCENES:
+    chunker = chunker or _chunks
+    for sc in (scene_defs or SCENES):
         st = SceneT(sc.id, sc.music, t, t, sc.chapter)
         cur = t + sc.lead + (CHAPTER_CARD if sc.chapter else 0.0)
         st.first_beat = cur - t
@@ -103,7 +104,7 @@ def build():
                 bt = BeatT("line", cur, cur + dur + b.gap, spk=b.spk, text=b.text,
                            tag=b.tag, npy=npy, env=env, speech_end=cur + dur)
                 st.beats.append(bt)
-                parts = _chunks(b.text)
+                parts = chunker(b.text)
                 total = sum(len(p) for p in parts)
                 c0 = cur
                 for p in parts:

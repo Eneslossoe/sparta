@@ -13,6 +13,8 @@ ve açık kaynak Türkçe TTS ses modeli).
 | `300_Spartalidan_Biri_Olsaydin.mp4` | Aynı videonun yüksek kaliteli hali (178 MB, `build.py` ile üretilir; GitHub limiti nedeniyle depoda yok) |
 | `300_Spartalidan_Biri_Olsaydin.srt` | Ayrı altyazı dosyası (YouTube'a ayrıca yüklenebilir) |
 | `thumbnail.jpg` / `thumbnail.png` | 1280×720 kapak görseli |
+| `Reels_300_Spartali.mp4` | Dikey Reels/Shorts/TikTok versiyonu: 1080×1920, 55,5 sn |
+| `Reels_300_Spartali.srt` | Reels altyazı dosyası |
 
 ## Bölümler
 
@@ -41,6 +43,7 @@ python3 build.py                         # ses modeli indirilir, her şey yenide
 python3 build.py --audio                 # sadece ses
 python3 build.py --video                 # sadece görüntü (+ mevcut ses ile birleştirme)
 python3 src/thumbnail.py                 # kapak görseli
+python3 build_reels.py                   # dikey Reels versiyonu (max 60 sn)
 python3 src/render.py --scene final      # bir sahnenin önizleme kareleri
 ```
 

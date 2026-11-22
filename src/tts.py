@@ -22,6 +22,7 @@ os.makedirs(CACHE, exist_ok=True)
 # tract (preserved) or move it with pitch (shifted), fx = extra ffmpeg filters
 VOICES = {
     "N":   dict(pitch=0.0,  length=1.04, formant="preserved", fx="", gain=1.0),
+    "NR":  dict(pitch=0.0,  length=0.93, formant="preserved", fx="", gain=1.0),   # reels narrator
     "LEO": dict(pitch=-3.0, length=1.06, formant="preserved",
                 fx="aecho=0.8:0.6:45:0.18,bass=g=3", gain=1.05),
     "XER": dict(pitch=-5.0, length=1.10, formant="preserved",
